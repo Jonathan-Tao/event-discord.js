@@ -1,8 +1,6 @@
 module.exports = {
 	name: 'help',
 	description: 'use this command to get a list of commands',
-	args: false,
-	delete: false,
 	execute(message) {
 
 		const messageReturn = {

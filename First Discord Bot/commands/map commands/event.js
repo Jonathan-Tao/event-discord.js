@@ -2,7 +2,6 @@ module.exports = {
 	name: 'event',
 	description: 'command used for events',
 	args: true,
-	delete: false,
 	execute(message, args, slicedArgs) {
 
 		const messageReturn = {

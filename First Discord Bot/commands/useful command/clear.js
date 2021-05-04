@@ -1,8 +1,6 @@
 module.exports = {
 	name: 'clear',
 	description: 'Prune up to 99 messages.',
-	args: false,
-	delete: false,
 	execute(message, args, cut_args) {
 		const amount = parseInt(cut_args[0]) + 1;
 

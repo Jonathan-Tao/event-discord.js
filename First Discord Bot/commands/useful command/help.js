@@ -8,7 +8,7 @@ module.exports = {
 			fields: [
 				{
 					name: '!event',
-					value: 'allows you to create a event \n !event <month/day/year/time(seperate by slashes)> <place/link> <description>',
+					value: 'allows you to create a event \n !event <month/day/year/time(seperate by slashes)> <place> <description> <link(optional)>',
 				},
 				{
 					name: '!embed',

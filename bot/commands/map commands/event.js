@@ -2,6 +2,7 @@ module.exports = {
 	name: 'event',
 	description: 'command used for events',
 	args: true,
+	delete: true,
 	execute(message, args, slicedArgs) {
 		const validUrl = require('valid-url');
 		let messageReturn;
@@ -48,11 +49,11 @@ module.exports = {
 					},
 				],
 				image: {
-					url: 'https://i.imgur.com/wSTFkRM.png',
+					url: 'https://cdn.discordapp.com/attachments/839347682069315614/839347707360706570/unknown.png',
 				},
 				timestamp: new Date(),
 				footer: {
-					text: '!embed',
+					text: '!event',
 					icon_url: 'https://i.imgur.com/wSTFkRM.png',
 				},
 			};
@@ -100,9 +101,6 @@ module.exports = {
 						inline: true,
 					},
 				],
-				image: {
-					url: 'https://i.imgur.com/wSTFkRM.png',
-				},
 				timestamp: new Date(),
 				footer: {
 					text: '!embed',
@@ -110,8 +108,10 @@ module.exports = {
 				},
 			};
 		}
-		return message.channel.send({ embed: messageReturn });
-
+		message.channel.send({ embed: messageReturn }).then((msg) => {
+			msg.react('✅');
+			msg.react('⛔');
+		});
 
 	},
 };

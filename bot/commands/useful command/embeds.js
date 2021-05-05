@@ -43,7 +43,7 @@ module.exports = {
 			};
 		}
 
-		return message.channel.send({ embed: messageReturn });
+		message.channel.send({ embed: messageReturn });
 
 
 	},

@@ -44,6 +44,7 @@ client.on('message', message => {
 	if (command.delete) {
 		return message.delete();
 	}
+
 });
 
 client.login(token);

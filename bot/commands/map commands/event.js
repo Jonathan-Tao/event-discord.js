@@ -5,6 +5,9 @@ module.exports = {
 	execute(message, args, slicedArgs) {
 		const validUrl = require('valid-url');
 		let messageReturn;
+		const time = slicedArgs[0].split('/');
+		console.log(time);
+
 		if (slicedArgs[3] != null && validUrl.isUri(slicedArgs[3])) {
 			messageReturn = {
 				color: 0x0099ff,
@@ -12,19 +15,11 @@ module.exports = {
 					name: message.author.username,
 					icon_url: message.author.displayAvatarURL({ dynamic: true }),
 				},
-				thumbnail: {
-					url: 'https://cdn.discordapp.com/attachments/839347682069315614/839347707360706570/unknown.png',
-				},
 				fields: [
 					{
-						name: 'month/day/year/time',
-						value: slicedArgs[0],
+						name: 'Date',
+						value: `Month: ${time[0]} \n Day: ${time[1]} \n Year: ${time[2]} \n Time: ${time[3]}`,
 						inline: true,
-					},
-					{
-						name: '\u200b',
-						value: '\u200b',
-						inline: false,
 					},
 					{
 						name: 'Place',
@@ -39,11 +34,6 @@ module.exports = {
 					{
 						name: 'link',
 						value: slicedArgs[3],
-						inline: true,
-					},
-					{
-						name: '\u200b',
-						value: '\u200b',
 						inline: false,
 					},
 					{
@@ -57,6 +47,9 @@ module.exports = {
 						inline: true,
 					},
 				],
+				image: {
+					url: 'https://i.imgur.com/wSTFkRM.png',
+				},
 				timestamp: new Date(),
 				footer: {
 					text: '!embed',
@@ -75,19 +68,11 @@ module.exports = {
 					name: message.author.username,
 					icon_url: message.author.displayAvatarURL({ dynamic: true }),
 				},
-				thumbnail: {
-					url: 'https://cdn.discordapp.com/attachments/839347682069315614/839347707360706570/unknown.png',
-				},
 				fields: [
 					{
 						name: 'month/day/year/time',
-						value: slicedArgs[0],
+						value: `Month: ${time[0]} \n Day: ${time[1]} \n Year: ${time[2]} \n Time: ${time[3]}`,
 						inline: true,
-					},
-					{
-						name: '\u200b',
-						value: '\u200b',
-						inline: false,
 					},
 					{
 						name: 'Place',
@@ -115,6 +100,9 @@ module.exports = {
 						inline: true,
 					},
 				],
+				image: {
+					url: 'https://i.imgur.com/wSTFkRM.png',
+				},
 				timestamp: new Date(),
 				footer: {
 					text: '!embed',

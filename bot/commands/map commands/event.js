@@ -108,8 +108,10 @@ module.exports = {
 				},
 			};
 		}
-		return message.channel.send({ embed: messageReturn });
-
+		message.channel.send({ embed: messageReturn }).then((msg) => {
+			msg.react('✅');
+			msg.react('⛔');
+		});
 
 	},
 };

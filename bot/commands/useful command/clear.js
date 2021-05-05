@@ -26,7 +26,7 @@ module.exports = {
 			message.channel.send('there was an error trying execute the clear command in this channel!');
 
 		});
-		return message.channel.send({ embed: messageReturn });
+		message.channel.send({ embed: messageReturn });
 
 	},
 };

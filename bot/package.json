@@ -11,7 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "discord": "^0.8.2",
-    "is-image-url": "^1.1.8"
+    "is-image-url": "^1.1.8",
+    "valid-url": "^1.0.9"
   },
   "devDependencies": {
     "eslint": "^7.25.0"

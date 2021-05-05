@@ -3,8 +3,12 @@ module.exports = {
 	description: 'command used for events',
 	args: true,
 	execute(message, args, slicedArgs) {
+		const validUrl = require('valid-url');
 		let messageReturn;
-		if (slicedArgs[3] != null) {
+		const time = slicedArgs[0].split('/');
+		console.log(time);
+
+		if (slicedArgs[3] != null && validUrl.isUri(slicedArgs[3])) {
 			messageReturn = {
 				color: 0x0099ff,
 				author: {
@@ -13,19 +17,19 @@ module.exports = {
 				},
 				fields: [
 					{
-						name: 'month/day/year/time',
-						value: slicedArgs[0],
-						inline: false,
+						name: 'Date',
+						value: `Month: ${time[0]} \n Day: ${time[1]} \n Year: ${time[2]} \n Time: ${time[3]}`,
+						inline: true,
 					},
 					{
 						name: 'Place',
 						value: slicedArgs[1],
-						inline: false,
+						inline: true,
 					},
 					{
 						name: 'description',
 						value: slicedArgs[2],
-						inline: false,
+						inline: true,
 					},
 					{
 						name: 'link',
@@ -35,9 +39,17 @@ module.exports = {
 					{
 						name: 'Signed Up',
 						value: 'stuff',
-						inline: false,
+						inline: true,
+					},
+					{
+						name: 'Can\'t',
+						value: 'stuff',
+						inline: true,
 					},
 				],
+				image: {
+					url: 'https://i.imgur.com/wSTFkRM.png',
+				},
 				timestamp: new Date(),
 				footer: {
 					text: '!embed',
@@ -45,7 +57,11 @@ module.exports = {
 				},
 			};
 		}
+		else if (slicedArgs[3] != null && !validUrl.isUri(slicedArgs[3])) {
+			return message.channel.send(`You didn't provide a valid link, ${message.author}!`);
+		}
 		else {
+
 			messageReturn = {
 				color: 0x0099ff,
 				author: {
@@ -55,25 +71,38 @@ module.exports = {
 				fields: [
 					{
 						name: 'month/day/year/time',
-						value: slicedArgs[0],
-						inline: false,
+						value: `Month: ${time[0]} \n Day: ${time[1]} \n Year: ${time[2]} \n Time: ${time[3]}`,
+						inline: true,
 					},
 					{
 						name: 'Place',
 						value: slicedArgs[1],
-						inline: false,
+						inline: true,
 					},
 					{
 						name: 'description',
 						value: slicedArgs[2],
+						inline: true,
+					},
+					{
+						name: '\u200b',
+						value: '\u200b',
 						inline: false,
 					},
 					{
 						name: 'Signed Up',
 						value: 'stuff',
-						inline: false,
+						inline: true,
+					},
+					{
+						name: 'Can\'t',
+						value: 'stuff',
+						inline: true,
 					},
 				],
+				image: {
+					url: 'https://i.imgur.com/wSTFkRM.png',
+				},
 				timestamp: new Date(),
 				footer: {
 					text: '!embed',

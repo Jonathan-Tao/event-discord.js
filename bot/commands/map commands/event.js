@@ -2,6 +2,7 @@ module.exports = {
 	name: 'event',
 	description: 'command used for events',
 	args: true,
+	delete: true,
 	execute(message, args, slicedArgs) {
 		const validUrl = require('valid-url');
 		let messageReturn;
@@ -100,9 +101,6 @@ module.exports = {
 						inline: true,
 					},
 				],
-				image: {
-					url: 'https://cdn.discordapp.com/attachments/839347682069315614/839347707360706570/unknown.png',
-				},
 				timestamp: new Date(),
 				footer: {
 					text: '!embed',

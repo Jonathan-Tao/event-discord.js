@@ -17,17 +17,10 @@ module.exports = {
 				{
 					name: '!help',
 					value: 'prints out a list of commands',
-					inline: false,
-				},
-				{
-					name: '!args-info',
-					value: 'argument debugging command \n !args-info <input>',
-					inline: false,
 				},
 				{
 					name: '!clear',
 					value: 'Allows you to clear up to 99 messages \n !clear <number of messages>',
-					inline: false,
 				},
 			],
 			timestamp: new Date(),

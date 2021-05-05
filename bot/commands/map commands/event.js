@@ -3,8 +3,9 @@ module.exports = {
 	description: 'command used for events',
 	args: true,
 	execute(message, args, slicedArgs) {
+		const validUrl = require('valid-url');
 		let messageReturn;
-		if (slicedArgs[3] != null) {
+		if (slicedArgs[3] != null && validUrl.isUri(slicedArgs[3])) {
 			messageReturn = {
 				color: 0x0099ff,
 				author: {
@@ -45,7 +46,11 @@ module.exports = {
 				},
 			};
 		}
+		else if (slicedArgs[3] != null && !validUrl.isUri(slicedArgs[3])) {
+			return message.channel.send(`You didn't provide a valid link, ${message.author}!`);
+		}
 		else {
+
 			messageReturn = {
 				color: 0x0099ff,
 				author: {

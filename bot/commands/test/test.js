@@ -46,6 +46,11 @@ module.exports = {
 			if (thing === true) {
 				msg.edit({ embed: countdownEmbed2 });
 			}
+			else if (thing !== true) {
+				setTimeout(function() {
+					msg.edit({ embed: countdownEmbed2 });
+				}, 2000);
+			}
 		});
 	},
 };

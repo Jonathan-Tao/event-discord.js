@@ -26,7 +26,7 @@ module.exports = {
 			timestamp: new Date(),
 			footer: {
 				text: '!help',
-				icon_url: 'https://i.imgur.com/wSTFkRM.png',
+				icon_url: 'https://cdn.discordapp.com/attachments/839347682069315614/839570883534389278/discord_bot_help_command_logo.png',
 			},
 		};
 

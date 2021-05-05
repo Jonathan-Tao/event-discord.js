@@ -48,7 +48,7 @@ module.exports = {
 					},
 				],
 				image: {
-					url: 'https://i.imgur.com/wSTFkRM.png',
+					url: 'https://cdn.discordapp.com/attachments/839347682069315614/839347707360706570/unknown.png',
 				},
 				timestamp: new Date(),
 				footer: {
@@ -101,7 +101,7 @@ module.exports = {
 					},
 				],
 				image: {
-					url: 'https://i.imgur.com/wSTFkRM.png',
+					url: 'https://cdn.discordapp.com/attachments/839347682069315614/839347707360706570/unknown.png',
 				},
 				timestamp: new Date(),
 				footer: {

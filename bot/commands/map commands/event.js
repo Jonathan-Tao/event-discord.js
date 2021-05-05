@@ -12,36 +12,49 @@ module.exports = {
 					name: message.author.username,
 					icon_url: message.author.displayAvatarURL({ dynamic: true }),
 				},
+				thumbnail: {
+					url: 'https://cdn.discordapp.com/attachments/839347682069315614/839347707360706570/unknown.png',
+				},
 				fields: [
 					{
 						name: 'month/day/year/time',
 						value: slicedArgs[0],
+						inline: true,
+					},
+					{
+						name: '\u200b',
+						value: '\u200b',
 						inline: false,
 					},
 					{
 						name: 'Place',
 						value: slicedArgs[1],
-						inline: false,
+						inline: true,
 					},
 					{
 						name: 'description',
 						value: slicedArgs[2],
-						inline: false,
+						inline: true,
 					},
 					{
 						name: 'link',
 						value: slicedArgs[3],
+						inline: true,
+					},
+					{
+						name: '\u200b',
+						value: '\u200b',
 						inline: false,
 					},
 					{
 						name: 'Signed Up',
 						value: 'stuff',
-						inline: false,
+						inline: true,
 					},
 					{
 						name: 'Can\'t',
 						value: 'stuff',
-						inline: false,
+						inline: true,
 					},
 				],
 				timestamp: new Date(),
@@ -62,26 +75,44 @@ module.exports = {
 					name: message.author.username,
 					icon_url: message.author.displayAvatarURL({ dynamic: true }),
 				},
+				thumbnail: {
+					url: 'https://cdn.discordapp.com/attachments/839347682069315614/839347707360706570/unknown.png',
+				},
 				fields: [
 					{
 						name: 'month/day/year/time',
 						value: slicedArgs[0],
+						inline: true,
+					},
+					{
+						name: '\u200b',
+						value: '\u200b',
 						inline: false,
 					},
 					{
 						name: 'Place',
 						value: slicedArgs[1],
-						inline: false,
+						inline: true,
 					},
 					{
 						name: 'description',
 						value: slicedArgs[2],
+						inline: true,
+					},
+					{
+						name: '\u200b',
+						value: '\u200b',
 						inline: false,
 					},
 					{
 						name: 'Signed Up',
 						value: 'stuff',
-						inline: false,
+						inline: true,
+					},
+					{
+						name: 'Can\'t',
+						value: 'stuff',
+						inline: true,
 					},
 				],
 				timestamp: new Date(),

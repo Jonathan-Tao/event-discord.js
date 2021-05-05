@@ -52,7 +52,7 @@ module.exports = {
 				},
 				timestamp: new Date(),
 				footer: {
-					text: '!embed',
+					text: '!event',
 					icon_url: 'https://i.imgur.com/wSTFkRM.png',
 				},
 			};

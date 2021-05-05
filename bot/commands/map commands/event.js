@@ -38,6 +38,11 @@ module.exports = {
 						value: 'stuff',
 						inline: false,
 					},
+					{
+						name: 'Can\'t',
+						value: 'stuff',
+						inline: false,
+					},
 				],
 				timestamp: new Date(),
 				footer: {

@@ -30,6 +30,11 @@ client.on('message', message => {
 
 	const command = client.commands.get(commandName);
 
+	if (message.deleted === true) {
+		message.channel.send('snipe doesn\'t work anymore');
+		message.delete();
+	}
+
 	if (command.args && !args.length) {
 		return message.channel.send(`You didn't provide any arguments, ${message.author}!`);
 	}
@@ -44,7 +49,15 @@ client.on('message', message => {
 	if (command.delete) {
 		return message.delete();
 	}
+});
 
+client.on('messageDelete', (messageDelete) => {
+	if (messageDelete.author.bot) return;
+	if (messageDelete.author.username === 'Playbird') {
+		messageDelete.channel.send('snipe no work no more').then((msg) => {
+			msg.delete();
+		});
+	}
 });
 
 client.login(token);

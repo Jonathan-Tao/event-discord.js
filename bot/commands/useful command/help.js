@@ -7,20 +7,24 @@ module.exports = {
 			color: 0x0099ff,
 			fields: [
 				{
-					name: '!event',
+					name: '.event',
 					value: 'allows you to create a event \n !event <month/day/year/time(seperate by slashes)> <place> <description> <link(optional)>',
 				},
 				{
-					name: '!embed',
+					name: '.embed',
 					value: 'allows you to create a fancy embeded message \n !embed <imagine link(not required)> <text>',
 				},
 				{
-					name: '!help',
+					name: '.help',
 					value: 'prints out a list of commands',
 				},
 				{
-					name: '!clear',
+					name: '.clear',
 					value: 'Allows you to clear up to 99 messages \n !clear <number of messages>',
+				},
+				{
+					name: '.delete',
+					value: 'N/A',
 				},
 			],
 			timestamp: new Date(),
